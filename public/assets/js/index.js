@@ -1,3 +1,61 @@
+// Dark Mode Start
+const storedTheme = localStorage.getItem('theme')
+
+const getPreferredTheme = () => {
+    if (storedTheme) {
+        return storedTheme
+    }
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+}
+
+const setTheme = function(theme) {
+    if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark')
+    } else {
+        document.documentElement.setAttribute('data-bs-theme', theme)
+    }
+}
+
+setTheme(getPreferredTheme())
+
+window.addEventListener('DOMContentLoaded', () => {
+    var el = document.querySelector('.theme-icon-active');
+    if (el != 'undefined' && el != null) {
+        const showActiveTheme = theme => {
+            const activeThemeIcon = document.querySelector('.theme-icon-active use')
+            const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+            const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+
+            document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                element.classList.remove('active')
+            })
+
+            btnToActive.classList.add('active')
+            activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+        }
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+            if (storedTheme !== 'light' || storedTheme !== 'dark') {
+                setTheme(getPreferredTheme())
+            }
+        })
+
+        showActiveTheme(getPreferredTheme())
+
+        document.querySelectorAll('[data-bs-theme-value]')
+            .forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const theme = toggle.getAttribute('data-bs-theme-value')
+                    localStorage.setItem('theme', theme)
+                    setTheme(theme)
+                    showActiveTheme(theme)
+                })
+            })
+
+    }
+})
+// Dark Mode End
+
 // Toggle Password Visibility Start
 function togglePasswordVisibility(inputId, iconId) {
     const input = document.getElementById(inputId);
@@ -60,12 +118,12 @@ function checkPasswordStrength(inputId, meterId, textId) {
     }
 }
 // Password Strength Meter End
-
 document.addEventListener("DOMContentLoaded", function() {
+    const loginSubmitButton = document.getElementById("loginSubmitButton");
     const newPasswordInput = document.getElementById("floatingNewPassword");
-    const confirmPasswordInput = document.getElementById(
-        "floatingConfirmPassword"
-    );
+    const confirmPasswordInput = document.getElementById("floatingConfirmPassword");
+    const nextStepButton = document.getElementById("nextStepButton");
+    const registerSubmitButton = document.getElementById("registerSubmitButton");
     let passwordsMatch = false;
 
     // Password Match Check Start
@@ -74,14 +132,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const confirmPassword = confirmPasswordInput.value;
 
         if (!newPassword || !confirmPassword) {
-            newPasswordInput.classList.remove(
-                "border-danger",
-                "border-success"
-            );
-            confirmPasswordInput.classList.remove(
-                "border-danger",
-                "border-success"
-            );
+            newPasswordInput.classList.remove("border-danger", "border-success");
+            confirmPasswordInput.classList.remove("border-danger", "border-success");
             passwordsMatch = false;
             return;
         }
@@ -106,13 +158,22 @@ document.addEventListener("DOMContentLoaded", function() {
     // Password Match Check End
 
     // Field Check Start
-    const loginModal = document.getElementById("loginModal");
     const registerModal = document.getElementById("registerModal");
-    const loginSubmitButton = loginModal.querySelector('#loginModal button[type="submit"]');
-    const registerSubmitButton = registerModal.querySelector('#registerModal button[type="submit"]');
+    const loginModal = document.getElementById("loginModal");
 
-    function checkFieldCompletion(modal, submitButton) {
-        const inputs = modal.querySelectorAll("input, select, textarea");
+    function checkLoginFormCompletion() {
+        const usernameInput = document.getElementById("floatingUsername");
+        const passwordInput = document.getElementById("floatingPassword");
+        const loginSubmitButton = document.getElementById("loginSubmitButton");
+
+        const allFilled = usernameInput.value.trim() !== "" && passwordInput.value.trim() !== "";
+        loginSubmitButton.disabled = !allFilled;
+    }
+
+    loginModal.addEventListener("input", checkLoginFormCompletion);
+
+    function checkRegisterFormCompletion(modal, step) {
+        const inputs = modal.querySelectorAll(`#step${step} input, #step${step} select, #step${step} textarea`);
         let allFilled = true;
 
         inputs.forEach((input) => {
@@ -121,80 +182,65 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        if (modal === registerModal && (!passwordsMatch)) {
-            allFilled = false;
+        if (step === 1) {
+            if (!passwordsMatch) {
+                allFilled = false;
+            }
+            nextStepButton.disabled = !allFilled;
+        } else if (step === 2) {
+            registerSubmitButton.disabled = !allFilled;
         }
-
-        submitButton.disabled = !allFilled;
     }
 
-    loginModal.addEventListener("input", function() {
-        checkFieldCompletion(loginModal, loginSubmitButton);
-    });
-
     registerModal.addEventListener("input", function() {
-        checkFieldCompletion(registerModal, registerSubmitButton);
+        checkRegisterFormCompletion(registerModal, 1);
+        checkRegisterFormCompletion(registerModal, 2);
     });
 
     loginSubmitButton.disabled = true;
+    nextStepButton.disabled = true;
     registerSubmitButton.disabled = true;
     // Field Check End
 });
 
-// Dark Mode Start
-const storedTheme = localStorage.getItem('theme')
-
-const getPreferredTheme = () => {
-    if (storedTheme) {
-        return storedTheme
-    }
-    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
-}
-
-const setTheme = function(theme) {
-    if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.setAttribute('data-bs-theme', 'dark')
-    } else {
-        document.documentElement.setAttribute('data-bs-theme', theme)
-    }
-}
-
-setTheme(getPreferredTheme())
-
-window.addEventListener('DOMContentLoaded', () => {
-    var el = document.querySelector('.theme-icon-active');
-    if (el != 'undefined' && el != null) {
-        const showActiveTheme = theme => {
-            const activeThemeIcon = document.querySelector('.theme-icon-active use')
-            const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-            const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
-
-            document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-                element.classList.remove('active')
-            })
-
-            btnToActive.classList.add('active')
-            activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+// Register Modal Step by Step Start
+function updateStepButtons(step) {
+    const stepButtons = document.querySelectorAll('.step-btn');
+    stepButtons.forEach(button => {
+        if (parseInt(button.getAttribute('data-step')) === step) {
+            button.classList.remove('btn-light');
+            button.classList.add('btn-primary');
+        } else {
+            button.classList.remove('btn-primary');
+            button.classList.add('btn-light');
         }
+    });
+}
 
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-            if (storedTheme !== 'light' || storedTheme !== 'dark') {
-                setTheme(getPreferredTheme())
-            }
-        })
+function nextStep() {
+    const step1Inputs = document.querySelectorAll('#step1 input');
+    let allFilled = true;
 
-        showActiveTheme(getPreferredTheme())
+    step1Inputs.forEach(input => {
+        if (input.value.trim() === "") {
+            allFilled = false;
+        }
+    });
 
-        document.querySelectorAll('[data-bs-theme-value]')
-            .forEach(toggle => {
-                toggle.addEventListener('click', () => {
-                    const theme = toggle.getAttribute('data-bs-theme-value')
-                    localStorage.setItem('theme', theme)
-                    setTheme(theme)
-                    showActiveTheme(theme)
-                })
-            })
-
+    if (allFilled) {
+        document.getElementById('step1').style.display = 'none';
+        document.getElementById('step2').style.display = 'block';
+        updateStepButtons(2);
     }
-})
-// Dark Mode End
+}
+
+function prevStep() {
+    document.getElementById('step2').style.display = 'none';
+    document.getElementById('step1').style.display = 'block';
+    updateStepButtons(1);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateStepButtons(1);
+});
+// Register Modal Step by Step End
