@@ -26,7 +26,8 @@
                         </button>
                     </div>
 
-                    <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Masuk</button>
+                    <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit"
+                        id="loginSubmitButton">Masuk</button>
                     <div class="pb-2">
                         <small class="text-body-secondary mb-4">Belum punya akun?</small>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal"
