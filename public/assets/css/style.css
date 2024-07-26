@@ -18508,7 +18508,7 @@ a.badge:hover {
 
 .dropdown .dropdown-toggle:after {
     content: "\f107";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Pro";
     font-weight: 900;
     vertical-align: middle;
     border: none;
@@ -18516,7 +18516,7 @@ a.badge:hover {
 
 .dropup .dropdown-toggle:after {
     content: "\f106";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Pro";
     font-weight: 900;
     vertical-align: middle;
     border: none;
@@ -18524,7 +18524,7 @@ a.badge:hover {
 
 .dropstart .dropdown-toggle:before {
     content: "\f104";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Pro";
     font-weight: 900;
     vertical-align: middle;
     border: none;
@@ -18532,7 +18532,7 @@ a.badge:hover {
 
 .dropend .dropdown-toggle:after {
     content: "\f105";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Pro";
     font-weight: 900;
     vertical-align: middle;
     border: none;
@@ -18814,7 +18814,7 @@ a.badge:hover {
 
 .navbar-expand-sm .dropdown-toggle:after {
     content: "\f107";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Pro";
     margin-left: 0.35rem;
     font-weight: 900;
     font-size: 0.8rem;
@@ -18844,7 +18844,7 @@ a.badge:hover {
     }
     .navbar-expand-sm .dropdown.dropend .dropdown-toggle:after {
         content: "\f054";
-        font-family: "Font Awesome 6 Free";
+        font-family: "Font Awesome 6 Pro";
         right: 1rem;
         font-size: 0.7rem;
         line-height: 2.2;
@@ -18852,7 +18852,7 @@ a.badge:hover {
     .navbar-expand-sm .dropdown.dropstart .dropdown-toggle:before {
         content: "\f104";
         margin-right: 0;
-        font-family: "Font Awesome 6 Free";
+        font-family: "Font Awesome 6 Pro";
         right: 1rem;
         font-size: 0.8rem;
         line-height: 2.2;
@@ -18961,7 +18961,7 @@ a.badge:hover {
     }
     .navbar-expand-sm .dropdown.dropstart .dropdown-toggle:before {
         content: "\f107";
-        font-family: "Font Awesome 6 Free";
+        font-family: "Font Awesome 6 Pro";
         margin-left: 0.35rem;
         margin-right: 0;
         font-weight: 900;
@@ -19022,7 +19022,7 @@ a.badge:hover {
 }
 .navbar-expand-md .dropdown-toggle:after {
     content: "\f107";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Pro";
     margin-left: 0.35rem;
     font-weight: 900;
     font-size: 0.8rem;
@@ -19052,7 +19052,7 @@ a.badge:hover {
     }
     .navbar-expand-md .dropdown.dropend .dropdown-toggle:after {
         content: "\f054";
-        font-family: "Font Awesome 6 Free";
+        font-family: "Font Awesome 6 Pro";
         right: 1rem;
         font-size: 0.7rem;
         line-height: 2.2;
@@ -19060,7 +19060,7 @@ a.badge:hover {
     .navbar-expand-md .dropdown.dropstart .dropdown-toggle:before {
         content: "\f104";
         margin-right: 0;
-        font-family: "Font Awesome 6 Free";
+        font-family: "Font Awesome 6 Pro";
         right: 1rem;
         font-size: 0.8rem;
         line-height: 2.2;
@@ -19169,7 +19169,7 @@ a.badge:hover {
     }
     .navbar-expand-md .dropdown.dropstart .dropdown-toggle:before {
         content: "\f107";
-        font-family: "Font Awesome 6 Free";
+        font-family: "Font Awesome 6 Pro";
         margin-left: 0.35rem;
         margin-right: 0;
         font-weight: 900;
@@ -19230,7 +19230,7 @@ a.badge:hover {
 }
 .navbar-expand-lg .dropdown-toggle:after {
     content: "\f107";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Pro";
     margin-left: 0.35rem;
     font-weight: 900;
     font-size: 0.8rem;
@@ -19260,7 +19260,7 @@ a.badge:hover {
     }
     .navbar-expand-lg .dropdown.dropend .dropdown-toggle:after {
         content: "\f054";
-        font-family: "Font Awesome 6 Free";
+        font-family: "Font Awesome 6 Pro";
         right: 1rem;
         font-size: 0.7rem;
         line-height: 2.2;
@@ -19268,7 +19268,7 @@ a.badge:hover {
     .navbar-expand-lg .dropdown.dropstart .dropdown-toggle:before {
         content: "\f104";
         margin-right: 0;
-        font-family: "Font Awesome 6 Free";
+        font-family: "Font Awesome 6 Pro";
         right: 1rem;
         font-size: 0.8rem;
         line-height: 2.2;
@@ -19377,7 +19377,7 @@ a.badge:hover {
     }
     .navbar-expand-lg .dropdown.dropstart .dropdown-toggle:before {
         content: "\f107";
-        font-family: "Font Awesome 6 Free";
+        font-family: "Font Awesome 6 Pro";
         margin-left: 0.35rem;
         margin-right: 0;
         font-weight: 900;
@@ -19438,7 +19438,7 @@ a.badge:hover {
 }
 .navbar-expand-xl .dropdown-toggle:after {
     content: "\f107";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Pro";
     margin-left: 0.35rem;
     font-weight: 900;
     font-size: 0.8rem;
@@ -19468,7 +19468,7 @@ a.badge:hover {
     }
     .navbar-expand-xl .dropdown.dropend .dropdown-toggle:after {
         content: "\f054";
-        font-family: "Font Awesome 6 Free";
+        font-family: "Font Awesome 6 Pro";
         right: 1rem;
         font-size: 0.7rem;
         line-height: 2.2;
@@ -19476,7 +19476,7 @@ a.badge:hover {
     .navbar-expand-xl .dropdown.dropstart .dropdown-toggle:before {
         content: "\f104";
         margin-right: 0;
-        font-family: "Font Awesome 6 Free";
+        font-family: "Font Awesome 6 Pro";
         right: 1rem;
         font-size: 0.8rem;
         line-height: 2.2;
@@ -19584,7 +19584,7 @@ a.badge:hover {
     }
     .navbar-expand-xl .dropdown.dropstart .dropdown-toggle:before {
         content: "\f107";
-        font-family: "Font Awesome 6 Free";
+        font-family: "Font Awesome 6 Pro";
         margin-left: 0.35rem;
         margin-right: 0;
         font-weight: 900;
@@ -19645,7 +19645,7 @@ a.badge:hover {
 }
 .navbar-expand-xxl .dropdown-toggle:after {
     content: "\f107";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Pro";
     margin-left: 0.35rem;
     font-weight: 900;
     font-size: 0.8rem;
@@ -19675,7 +19675,7 @@ a.badge:hover {
     }
     .navbar-expand-xxl .dropdown.dropend .dropdown-toggle:after {
         content: "\f054";
-        font-family: "Font Awesome 6 Free";
+        font-family: "Font Awesome 6 Pro";
         right: 1rem;
         font-size: 0.7rem;
         line-height: 2.2;
@@ -19683,7 +19683,7 @@ a.badge:hover {
     .navbar-expand-xxl .dropdown.dropstart .dropdown-toggle:before {
         content: "\f104";
         margin-right: 0;
-        font-family: "Font Awesome 6 Free";
+        font-family: "Font Awesome 6 Pro";
         right: 1rem;
         font-size: 0.8rem;
         line-height: 2.2;
@@ -19792,7 +19792,7 @@ a.badge:hover {
     }
     .navbar-expand-xxl .dropdown.dropstart .dropdown-toggle:before {
         content: "\f107";
-        font-family: "Font Awesome 6 Free";
+        font-family: "Font Awesome 6 Pro";
         margin-left: 0.35rem;
         margin-right: 0;
         font-weight: 900;
@@ -19853,7 +19853,7 @@ a.badge:hover {
 }
 .navbar-expand .dropdown-toggle:after {
     content: "\f107";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Pro";
     margin-left: 0.35rem;
     font-weight: 900;
     font-size: 0.8rem;
@@ -19882,7 +19882,7 @@ a.badge:hover {
 }
 .navbar-expand .dropdown.dropend .dropdown-toggle:after {
     content: "\f054";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Pro";
     right: 1rem;
     font-size: 0.7rem;
     line-height: 2.2;
@@ -19890,7 +19890,7 @@ a.badge:hover {
 .navbar-expand .dropdown.dropstart .dropdown-toggle:before {
     content: "\f104";
     margin-right: 0;
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Pro";
     right: 1rem;
     font-size: 0.8rem;
     line-height: 2.2;
@@ -19995,7 +19995,7 @@ a.badge:hover {
 }
 .navbar-expand .dropdown.dropstart .dropdown-toggle:before {
     content: "\f107";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Pro";
     margin-left: 0.35rem;
     margin-right: 0;
     font-weight: 900;
