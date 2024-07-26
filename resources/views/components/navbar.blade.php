@@ -45,13 +45,13 @@
                         <ul class="dropdown-menu dropdown-menu-end">
                             <!-- Dropdown submenu -->
                             <li>
-                                <a class="dropdown-item" href="/profile">
+                                <a class="dropdown-item {{ Request::is('profile') ? 'active' : '' }}" href="/profile">
                                     <i class="fa-regular fa-user fa-fw me-2"></i>
                                     My profile
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item {{ Request::is('orders') ? 'active' : '' }}" href="/orders">
                                     <i class="fa-regular fa-cart-shopping fa-fw me-2"></i>
                                     Order history
                                 </a>
@@ -152,13 +152,13 @@
                     <ul class="dropdown-menu dropdown-menu-end">
                         <!-- Dropdown submenu -->
                         <li>
-                            <a class="dropdown-item" href="/profile">
+                            <a class="dropdown-item {{ Request::is('profile') ? 'active' : '' }}" href="/profile">
                                 <i class="fa-regular fa-user fa-fw me-2"></i>
                                 My profile
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item {{ Request::is('orders') ? 'active' : '' }}" href="/orders">
                                 <i class="fa-regular fa-cart-shopping fa-fw me-2"></i>
                                 Order history
                             </a>

@@ -19,7 +19,7 @@
                             src="assets/images/users/default.jpg" alt="User" style="object-fit: cover;">
                     </div>
                     <h6 class="mb-0">John Doe</h6>
-                    <a href="#" class="text-reset text-primary-hover small">@johndoe</a>
+                    <a href="/profile" class="text-reset text-primary-hover small">@johndoe</a>
                 </div>
 
                 <!-- Card body START -->
@@ -27,14 +27,14 @@
                     <!-- Sidebar menu item START -->
                     <ul class="nav nav-pills-primary-border-start flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="account-detail.html">
+                            <a class="nav-link {{ Request::is('profile') ? 'active' : '' }}" href="/profile">
                                 <i class="fa-regular fa-user fa-fw me-2"></i>
                                 My profile
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="account-order.html">
+                            <a class="nav-link {{ Request::is('orders') ? 'active' : '' }}" href="/orders">
                                 <i class="fa-regular fa-cart-shopping fa-fw me-2"></i>
                                 Order history
                             </a>

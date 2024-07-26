@@ -291,3 +291,22 @@ function prevStep() {
     updateStepButtons(1);
 }
 // Register Modal Step by Step End
+
+// Order History Start
+document.addEventListener('DOMContentLoaded', function() {
+    // Chevron Lihat Detail
+    var seeDetails = document.querySelectorAll('.see-detail');
+    seeDetails.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var icon = this.querySelector('i');
+            if (this.classList.contains('collapsed')) {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            } else {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            }
+        });
+    });
+});
+// Order History End

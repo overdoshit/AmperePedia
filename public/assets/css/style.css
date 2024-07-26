@@ -10,15 +10,14 @@
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
+    width: 6px;
+    height: 6px;
     background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #a0a4a8;
     border-radius: 6px;
-    border: 3px solid white;
 }
 
 ::-webkit-scrollbar-track {
@@ -22105,3 +22104,61 @@ input[type="number"] {
     border-radius: 15px;
 }
 /* Register Modal End */
+
+/* Orders Timelines Start */
+.timeline {
+    position: relative;
+    padding: 20px 15px 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--bs-primary);
+    border-radius: 20px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+.timeline-date {
+    width: 150px;
+    font-size: 14px;
+    color: #999;
+    text-align: right;
+}
+
+.timeline-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #8D96AA;
+    box-shadow: rgb(232, 234, 238) 0px 0px 0px 4px;
+    margin: 0 15px;
+    position: relative;
+}
+
+.timeline-circle.active {
+    background: var(--bs-primary);
+    box-shadow: rgb(183, 244, 228) 0px 0px 0px 4px;
+}
+
+.timeline-content {
+    flex: 1;
+}
+
+.status {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.detail-status {
+    font-size: 13px;
+    color: #666;
+}
+/* Orders Timelines End */
