@@ -11,7 +11,7 @@
                     <div class="stepwizard-row setup-panel">
                         <div class="stepwizard-step col-xs-3">
                             <button type="button" class="btn btn-primary btn-circle step-btn" data-step="1"
-                                onclick="prevStep()">1</button>
+                                id="prevStepWizard" onclick="prevStep()">1</button>
                             <p><small>Account</small></p>
                         </div>
                         <div class="stepwizard-step col-xs-3">
