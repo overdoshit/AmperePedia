@@ -41,27 +41,28 @@
                                                 <!-- Avatar place holder -->
                                                 <span class="avatar avatar-xl">
                                                     <img class="avatar-img rounded-circle border border-white border-3 shadow"
-                                                        src="assets/images/users/default.jpg" alt="User">
+                                                        src="assets/images/users/default.jpg" alt="User"
+                                                        style="object-fit: cover;">
                                                 </span>
 
                                                 <!-- Remove btn -->
-                                                <button class="uploadremove" data-bs-toggle="tooltip"
-                                                    data-bs-title="Delete Image">
-                                                    <i class="bi bi-x text-white"></i>
+                                                <button
+                                                    class="uploadremove d-flex align-items-center justify-content-center"
+                                                    data-bs-toggle="tooltip" data-bs-title="Delete Image">
+                                                    <i class="fa-solid fa-xmark text-white fs-7"></i>
                                                 </button>
 
                                                 <!-- Change btn -->
                                                 <button
-                                                    class="btn btn-sm btn-round btn-primary position-absolute top-50 start-100 translate-middle mt-4 ms-n3"
+                                                    class="btn btn-sm btn-round btn-primary position-absolute top-50 start-100 translate-middle mt-4 ms-n3 d-flex align-items-center justify-content-center"
                                                     data-bs-toggle="tooltip" data-bs-title="Change Image">
-                                                    <i class="bi bi-pencil-square"></i>
-                                                    {{-- <input type="file" class="d-none" id="profileImage"
-                                                        name="profileImage"> --}}
+                                                    <i class="fa-solid fa-pen-to-square text-white fs-8"></i>
+                                                    {{-- <input type="file" class="d-none" id="profileImage" name="profileImage"> --}}
                                                 </button>
                                             </label>
 
                                             <p class="text-body-secondary mb-0" style="font-size: 13px">
-                                                <i class="bi bi-info-circle-fill"></i>
+                                                <i class="fa-solid fa-circle-info"></i>
                                                 JPG/JPEG/PNG/GIF no bigger than 3 MB and 5000px width and height.
                                             </p>
                                         </div>
@@ -105,7 +106,9 @@
 
                                     <div class="d-flex justify-content-end mt-4">
                                         <button type="submit" class="btn btn-primary mb-0"
-                                            id="updateProfileSubmitButton">Save Changes</button>
+                                            id="updateProfileSubmitButton">
+                                            Save Changes<i class="fa-solid fa-floppy-disk ms-2"></i>
+                                        </button>
                                     </div>
 
                                 </div>
@@ -155,14 +158,16 @@
                                             <i id="toggleChangePassword" class="fas fa-eye cursor-pointer p-2"></i>
                                         </button>
                                     </div>
-                                    <div class="mb-3">
-                                        <div class="progress">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div class="progress flex-grow-1 me-2">
                                             <div id="changePasswordStrengthMeter" class="progress-bar"
                                                 role="progressbar" style="width: 0%;" aria-valuenow="0"
                                                 aria-valuemin="0" aria-valuemax="100">
                                                 <span id="changePasswordStrengthText" class="text-light"></span>
                                             </div>
                                         </div>
+                                        <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip"
+                                            data-bs-title="Password harus minimal 8 karakter, dapat terdiri dari huruf kecil, huruf besar dan angka."></i>
                                     </div>
                                 </div>
 
@@ -183,8 +188,8 @@
                                                 class="fas fa-eye cursor-pointer p-2"></i>
                                         </button>
                                     </div>
-                                    <div class="mb-3">
-                                        <div class="progress">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div class="progress flex-grow-1 me-2">
                                             <div id="confirmChangePasswordStrengthMeter" class="progress-bar"
                                                 role="progressbar" style="width: 0%;" aria-valuenow="0"
                                                 aria-valuemin="0" aria-valuemax="100">
@@ -192,13 +197,17 @@
                                                     class="text-light"></span>
                                             </div>
                                         </div>
+                                        <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip"
+                                            data-bs-title="Password harus minimal 8 karakter, dapat terdiri dari huruf kecil, huruf besar dan angka."></i>
                                     </div>
                                 </div>
 
                                 <!-- Button -->
                                 <div class="d-flex justify-content-end mt-4">
                                     <button type="submit" class="btn btn-primary mb-0"
-                                        id="updatePasswordSubmitButton">Change Password</button>
+                                        id="updatePasswordSubmitButton">
+                                        Change Password<i class="fa-solid fa-lock-keyhole ms-2"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
