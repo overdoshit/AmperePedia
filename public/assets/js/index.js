@@ -118,62 +118,75 @@ function checkPasswordStrength(inputId, meterId, textId) {
     }
 }
 // Password Strength Meter End
+
 document.addEventListener("DOMContentLoaded", function() {
+    const loginModal = document.getElementById("loginModal");
     const loginSubmitButton = document.getElementById("loginSubmitButton");
+
+    const registerModal = document.getElementById("registerModal");
     const newPasswordInput = document.getElementById("floatingNewPassword");
     const confirmPasswordInput = document.getElementById("floatingConfirmPassword");
+    const nextStepWizard = document.getElementById("nextStepWizard");
     const nextStepButton = document.getElementById("nextStepButton");
     const registerSubmitButton = document.getElementById("registerSubmitButton");
+
+    const updateProfileForm = document.getElementById("updateProfile");
+    const updateProfileSubmitButton = document.getElementById("updateProfileSubmitButton");
+    
+    const updatePasswordForm = document.getElementById("updatePassword");
+    const changePasswordInput = document.getElementById("changePassword");
+    const confirmChangePasswordInput = document.getElementById("confirmChangePassword");
+    const updatePasswordSubmitButton = document.getElementById("updatePasswordSubmitButton");
+
     let passwordsMatch = false;
 
     // Password Match Check Start
-    function checkPasswordMatch() {
-        const newPassword = newPasswordInput.value;
+    function checkPasswordMatch(passwordInput, confirmPasswordInput) {
+        const password = passwordInput.value;
         const confirmPassword = confirmPasswordInput.value;
 
-        if (!newPassword || !confirmPassword) {
-            newPasswordInput.classList.remove("border-danger", "border-success");
+        if (!password || !confirmPassword) {
+            passwordInput.classList.remove("border-danger", "border-success");
             confirmPasswordInput.classList.remove("border-danger", "border-success");
             passwordsMatch = false;
             return;
         }
 
-        if (newPassword === confirmPassword) {
-            newPasswordInput.classList.remove("border-danger");
-            newPasswordInput.classList.add("border-success");
+        if (password === confirmPassword) {
+            passwordInput.classList.remove("border-danger");
+            passwordInput.classList.add("border-success");
             confirmPasswordInput.classList.remove("border-danger");
             confirmPasswordInput.classList.add("border-success");
             passwordsMatch = true;
         } else {
-            newPasswordInput.classList.remove("border-success");
-            newPasswordInput.classList.add("border-danger");
+            passwordInput.classList.remove("border-success");
+            passwordInput.classList.add("border-danger");
             confirmPasswordInput.classList.remove("border-success");
             confirmPasswordInput.classList.add("border-danger");
             passwordsMatch = false;
         }
     }
 
-    newPasswordInput.addEventListener("input", checkPasswordMatch);
-    confirmPasswordInput.addEventListener("input", checkPasswordMatch);
+    newPasswordInput.addEventListener("input", function() {
+        checkPasswordMatch(newPasswordInput, confirmPasswordInput);
+    });
+
+    confirmPasswordInput.addEventListener("input", function() {
+        checkPasswordMatch(newPasswordInput, confirmPasswordInput);
+    });
+
+    changePasswordInput.addEventListener("input", function() {
+        checkPasswordMatch(changePasswordInput, confirmChangePasswordInput);
+    });
+
+    confirmChangePasswordInput.addEventListener("input", function() {
+        checkPasswordMatch(changePasswordInput, confirmChangePasswordInput);
+    });
     // Password Match Check End
 
     // Field Check Start
-    const registerModal = document.getElementById("registerModal");
-    const loginModal = document.getElementById("loginModal");
-
-    function checkLoginFormCompletion() {
-        const usernameInput = document.getElementById("floatingUsername");
-        const passwordInput = document.getElementById("floatingPassword");
-        const loginSubmitButton = document.getElementById("loginSubmitButton");
-
-        const allFilled = usernameInput.value.trim() !== "" && passwordInput.value.trim() !== "";
-        loginSubmitButton.disabled = !allFilled;
-    }
-
-    loginModal.addEventListener("input", checkLoginFormCompletion);
-
-    function checkRegisterFormCompletion(modal, step) {
-        const inputs = modal.querySelectorAll(`#step${step} input, #step${step} select, #step${step} textarea`);
+    function checkFormCompletion(element, step = null) {
+        const inputs = element.querySelectorAll(step ? `#step${step} input, #step${step} select, #step${step} textarea` : 'input, select, textarea');
         let allFilled = true;
 
         inputs.forEach((input) => {
@@ -182,25 +195,51 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        if (step === 1) {
-            if (!passwordsMatch) {
-                allFilled = false;
+        if (element.id === "registerModal" && step === 1 && !passwordsMatch) {
+            allFilled = false;
+        }
+
+        if (element.id === "loginModal") {
+            loginSubmitButton.disabled = !allFilled;
+        } else if (element.id === "registerModal") {
+            if (step === 1) {
+                nextStepWizard.disabled = !allFilled;
+                nextStepButton.disabled = !allFilled;
+            } else if (step === 2) {
+                registerSubmitButton.disabled = !allFilled;
             }
-            nextStepButton.disabled = !allFilled;
-        } else if (step === 2) {
-            registerSubmitButton.disabled = !allFilled;
+        } else if (element.id === "updateProfile") {
+            updateProfileSubmitButton.disabled = !allFilled;
+        } else if (element.id === "updatePassword") {
+            updatePasswordSubmitButton.disabled = !allFilled || !passwordsMatch;
         }
     }
 
+    loginModal.addEventListener("input", function() {
+        checkFormCompletion(loginModal);
+    });
+
     registerModal.addEventListener("input", function() {
-        checkRegisterFormCompletion(registerModal, 1);
-        checkRegisterFormCompletion(registerModal, 2);
+        checkFormCompletion(registerModal, 1);
+        checkFormCompletion(registerModal, 2);
+    });
+
+    updateProfileForm.addEventListener("input", function() {
+        checkFormCompletion(updateProfileForm);
+    });
+
+    updatePasswordForm.addEventListener("input", function() {
+        checkFormCompletion(updatePasswordForm);
     });
 
     loginSubmitButton.disabled = true;
+    nextStepWizard.disabled = true;
     nextStepButton.disabled = true;
     registerSubmitButton.disabled = true;
+    updateProfileSubmitButton.disabled = true;
+    updatePasswordSubmitButton.disabled = true;
     // Field Check End
+
 });
 
 // Register Modal Step by Step Start
@@ -239,8 +278,4 @@ function prevStep() {
     document.getElementById('step1').style.display = 'block';
     updateStepButtons(1);
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    updateStepButtons(1);
-});
 // Register Modal Step by Step End
