@@ -137,7 +137,8 @@
                                             placeholder="Enter current password" required>
                                         <button type="button"
                                             class="btn position-absolute top-50 end-0 translate-middle-y p-0 me-2 border-0"
-                                            onclick="togglePasswordVisibility('currentPassword', 'toggleCurrentPassword')">
+                                            onclick="togglePasswordVisibility('currentPassword', 'toggleCurrentPassword')"
+                                            data-bs-toggle="tooltip" data-bs-title="Show Password">
                                             <i id="toggleCurrentPassword" class="fas fa-eye cursor-pointer p-2"></i>
                                         </button>
                                     </div>
@@ -154,7 +155,8 @@
                                             required>
                                         <button type="button"
                                             class="btn position-absolute top-50 end-0 translate-middle-y p-0 me-2 border-0"
-                                            onclick="togglePasswordVisibility('changePassword', 'toggleChangePassword')">
+                                            onclick="togglePasswordVisibility('changePassword', 'toggleChangePassword')"
+                                            data-bs-toggle="tooltip" data-bs-title="Show Password">
                                             <i id="toggleChangePassword" class="fas fa-eye cursor-pointer p-2"></i>
                                         </button>
                                     </div>
@@ -183,7 +185,8 @@
                                             required>
                                         <button type="button"
                                             class="btn position-absolute top-50 end-0 translate-middle-y p-0 me-2 border-0"
-                                            onclick="togglePasswordVisibility('confirmChangePassword', 'toggleConfirmChangePassword')">
+                                            onclick="togglePasswordVisibility('confirmChangePassword', 'toggleConfirmChangePassword')"
+                                            data-bs-toggle="tooltip" data-bs-title="Show Password">
                                             <i id="toggleConfirmChangePassword"
                                                 class="fas fa-eye cursor-pointer p-2"></i>
                                         </button>

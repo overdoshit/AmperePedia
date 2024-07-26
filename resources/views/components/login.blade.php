@@ -4,7 +4,8 @@
         <div class="modal-content rounded-4 shadow">
             <div class="modal-header p-4 mx-2 border-bottom-0">
                 <h1 class="fw-bold mb-0 fs-4" id="loginModalLabel">Masuk</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    data-bs-toggle="tooltip" data-bs-title="Close"></button>
             </div>
             <div class="modal-body p-3 mx-3 pt-0">
                 <form id="loginForm" action="" method="post">
@@ -21,7 +22,8 @@
                         <label for="floatingPassword">Password <span class="required">*</span></label>
                         <button type="button"
                             class="btn position-absolute top-50 end-0 translate-middle-y p-0 me-2 border-0"
-                            onclick="togglePasswordVisibility('floatingPassword', 'togglePassword')">
+                            onclick="togglePasswordVisibility('floatingPassword', 'togglePassword')"
+                            data-bs-toggle="tooltip" data-bs-title="Show Password">
                             <i id="togglePassword" class="fas fa-eye cursor-pointer p-2"></i>
                         </button>
                     </div>

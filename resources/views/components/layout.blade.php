@@ -57,7 +57,7 @@
     <x-register></x-register>
 
     <!-- Back to top -->
-    <div class="back-top"></div>
+    <div class="back-top" data-bs-toggle="tooltip" data-bs-title="Back to Top"></div>
 
     <!-- Custom JS -->
     <script src="assets/js/index.js"></script>

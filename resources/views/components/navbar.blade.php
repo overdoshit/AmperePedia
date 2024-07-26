@@ -71,7 +71,7 @@
             <!-- Buttons -->
             <ul class="nav align-items-center dropdown-hover ms-sm-2">
                 <!-- Dark mode option START -->
-                <li class="nav-item dropdown dropdown-animation">
+                <li class="nav-item dropdown dropdown-animation" data-bs-toggle="tooltip" data-bs-title="Change Theme">
                     <button class="btn btn-link mb-0 px-2 lh-1" id="bd-theme" type="button" aria-expanded="false"
                         data-bs-toggle="dropdown" data-bs-display="static">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"

@@ -26,16 +26,31 @@
                     <!-- Social buttons -->
                     <h6 class="mb-2 mb-md-2">Follow on</h6>
                     <ul class="list-inline mb-0 mt-3">
-                        <li class="list-inline-item"> <a class="btn btn-s btn-icon btn-light" href="#"><i
-                                    class="fab fa-fw fa-instagram lh-base"></i></a> </li>
-                        <li class="list-inline-item"> <a class="btn btn-s btn-icon btn-light" href="#"><i
-                                    class="fab fa-fw fa-facebook-f lh-base"></i></a> </li>
-                        <li class="list-inline-item"> <a class="btn btn-s btn-icon btn-light" href="#"><i
-                                    class="fab fa-fw fa-tiktok lh-base"></i></a> </li>
-                        <li class="list-inline-item"> <a class="btn btn-s btn-icon btn-light" href="#"><i
-                                    class="fab fa-fw fa-twitter lh-base"></i></a> </li>
-                        <li class="list-inline-item"> <a class="btn btn-s btn-icon btn-light" href="#"><i
-                                    class="fab fa-fw fa-youtube lh-base"></i></a> </li>
+                        <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-title="Instagram">
+                            <a class="btn btn-s btn-icon btn-light" href="#">
+                                <i class="fab fa-fw fa-instagram lh-base"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-title="Facebook">
+                            <a class="btn btn-s btn-icon btn-light" href="#">
+                                <i class="fab fa-fw fa-facebook-f lh-base"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-title="TikTok">
+                            <a class="btn btn-s btn-icon btn-light" href="#">
+                                <i class="fab fa-fw fa-tiktok lh-base"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-title="Twitter">
+                            <a class="btn btn-s btn-icon btn-light" href="#">
+                                <i class="fab fa-fw fa-twitter lh-base"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-title="YouTube">
+                            <a class="btn btn-s btn-icon btn-light" href="#">
+                                <i class="fab fa-fw fa-youtube lh-base"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

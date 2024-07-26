@@ -4,17 +4,18 @@
         <div class="modal-content rounded-4 shadow">
             <div class="modal-header p-4 mx-2 border-bottom-0">
                 <h1 class="fw-bold mb-0 fs-4" id="registerModalLabel">Daftar</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    data-bs-toggle="tooltip" data-bs-title="Close"></button>
             </div>
             <div class="modal-body p-3 mx-3 pt-0">
                 <div class="stepwizard">
                     <div class="stepwizard-row setup-panel">
-                        <div class="stepwizard-step col-xs-3">
+                        <div class="stepwizard-step col-xs-3" data-bs-toggle="tooltip" data-bs-title="Step 1">
                             <button type="button" class="btn btn-primary btn-circle step-btn" data-step="1"
                                 id="prevStepWizard" onclick="prevStep()">1</button>
                             <p><small>Account</small></p>
                         </div>
-                        <div class="stepwizard-step col-xs-3">
+                        <div class="stepwizard-step col-xs-3" data-bs-toggle="tooltip" data-bs-title="Step 2">
                             <button type="button" class="btn btn-light btn-circle step-btn" data-step="2"
                                 id="nextStepWizard" onclick="nextStep()">2</button>
                             <p><small>Personal</small></p>
@@ -41,7 +42,8 @@
                             <label for="floatingNewPassword">Password <span class="required">*</span></label>
                             <button type="button"
                                 class="btn position-absolute top-50 end-0 translate-middle-y p-0 me-2 border-0"
-                                onclick="togglePasswordVisibility('floatingNewPassword', 'toggleNewPassword')">
+                                onclick="togglePasswordVisibility('floatingNewPassword', 'toggleNewPassword')"
+                                data-bs-toggle="tooltip" data-bs-title="Show Password">
                                 <i id="toggleNewPassword" class="fas fa-eye cursor-pointer p-2"></i>
                             </button>
                         </div>
@@ -65,7 +67,8 @@
                                     class="required">*</span></label>
                             <button type="button"
                                 class="btn position-absolute top-50 end-0 translate-middle-y p-0 me-2 border-0"
-                                onclick="togglePasswordVisibility('floatingConfirmPassword', 'toggleConfirmPassword')">
+                                onclick="togglePasswordVisibility('floatingConfirmPassword', 'toggleConfirmPassword')"
+                                data-bs-toggle="tooltip" data-bs-title="Show Password">
                                 <i id="toggleConfirmPassword" class="fas fa-eye cursor-pointer p-2"></i>
                             </button>
                         </div>
