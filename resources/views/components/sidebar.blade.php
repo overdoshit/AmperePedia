@@ -15,8 +15,8 @@
                 <div class="card-header text-center border-bottom">
                     <!-- Avatar -->
                     <div class="avatar avatar-xl position-relative mb-2">
-                        <img class="avatar-img rounded-circle border-2 border-white"
-                            src="assets/images/users/default.jpg" alt="User">
+                        <img class="avatar-img rounded-circle border-2 border-white shadow"
+                            src="assets/images/users/default.jpg" alt="User" style="object-fit: cover;">
                     </div>
                     <h6 class="mb-0">John Doe</h6>
                     <a href="#" class="text-reset text-primary-hover small">@johndoe</a>
@@ -27,40 +27,23 @@
                     <!-- Sidebar menu item START -->
                     <ul class="nav nav-pills-primary-border-start flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="account-detail.html"><i
-                                    class="bi bi-person fa-fw me-2"></i>My profile</a>
+                            <a class="nav-link active" href="account-detail.html">
+                                <i class="fa-regular fa-user fa-fw me-2"></i>
+                                My profile
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="account-order.html">
+                                <i class="fa-regular fa-cart-shopping fa-fw me-2"></i>
+                                Order history
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="account-security.html"><i
-                                    class="bi bi-shield-lock fa-fw me-2"></i>Security</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="account-notification.html"><i
-                                    class="bi bi-bell fa-fw me-2"></i>Notification</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="account-projects.html"><i
-                                    class="bi bi-briefcase fa-fw me-2"></i>My projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="account-payment-details.html"><i
-                                    class="bi bi-wallet fa-fw me-2"></i>Payment details</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="account-order.html"><i class="bi bi-basket fa-fw me-2"></i>Order
-                                history</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="account-wishlist.html"><i
-                                    class="bi bi-heart fa-fw me-2"></i>Wishlist</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="account-delete.html"><i class="bi bi-trash fa-fw me-2"></i>Delete
-                                profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-danger" href="#"><i
-                                    class="fas fa-sign-out-alt fa-fw me-2"></i>Sign Out</a>
+                            <a class="nav-link text-danger" href="#">
+                                <i class="fas fa-sign-out-alt fa-fw me-2"></i>
+                                Sign Out
+                            </a>
                         </li>
                     </ul>
                     <!-- Sidebar menu item END -->

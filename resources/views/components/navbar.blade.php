@@ -16,15 +16,53 @@
                     <li class="nav-item"> <a class="nav-link" href="/#bayar">Home</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="/#layanan">Layanan</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="/#faq">FAQ</a> </li>
+
                     <!-- Masuk button -->
                     <li class="nav-item d-block d-sm-none text-center">
-                        <button class="btn btn-sm btn-outline-primary mb-0 w-75" data-bs-toggle="modal"
+                        <button class="btn btn-sm btn-outline-primary mb-0 w-100" data-bs-toggle="modal"
                             data-bs-target="#loginModal">Masuk</button>
                     </li>
                     <!-- Daftar button -->
                     <li class="nav-item d-block d-sm-none text-center">
-                        <button class="btn btn-sm btn-primary mb-0 w-75" data-bs-toggle="modal"
+                        <button class="btn btn-sm btn-primary mb-0 w-100" data-bs-toggle="modal"
                             data-bs-target="#registerModal">Daftar</button>
+                    </li>
+
+                    <!-- Bayar button -->
+                    <li class="nav-item d-block d-sm-none text-center">
+                        <a href="#" class="btn btn-sm btn-outline-primary mb-0 w-100">Bayar</a>
+                    </li>
+                    <!-- Profile button -->
+                    <li class="nav-item dropdown d-block d-sm-none">
+                        <div class="profile btn btn-primary px-2 d-flex justify-content-between align-items-center mb-0"
+                            role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true"
+                            aria-expanded="false" style="border-radius: 28px;">
+                            <img src="assets/images/users/default.jpg" alt="Profile"
+                                style="width: 25px; height: 25px; object-fit: cover; border-radius: 50%;"
+                                class="rounded-circle">
+                            <i class="fa-solid fa-bars mx-2 fs-7"></i>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <!-- Dropdown submenu -->
+                            <li>
+                                <a class="dropdown-item" href="/profile">
+                                    <i class="fa-regular fa-user fa-fw me-2"></i>
+                                    My profile
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa-regular fa-cart-shopping fa-fw me-2"></i>
+                                    Order history
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item text-danger" href="#">
+                                    <i class="fas fa-sign-out-alt fa-fw me-2"></i>
+                                    Sign Out
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -94,6 +132,44 @@
                 <li class="nav-item d-none d-sm-block">
                     <button class="btn btn-sm btn-primary mb-0" data-bs-toggle="modal"
                         data-bs-target="#registerModal">Daftar</button>
+                </li>
+
+                <!-- Bayar button -->
+                <li class="nav-item me-2 d-none d-sm-block">
+                    <a href="#" class="btn btn-sm btn-outline-primary mb-0">Bayar</a>
+                </li>
+
+                <!-- Profile button -->
+                <li class="nav-item dropdown d-none d-sm-block">
+                    <div class="profile btn btn-primary px-2 d-flex justify-content-between align-items-center mb-0"
+                        role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true"
+                        aria-expanded="false" style="border-radius: 28px;">
+                        <img src="assets/images/users/default.jpg" alt="Profile"
+                            style="width: 25px; height: 25px; object-fit: cover; border-radius: 50%;"
+                            class="rounded-circle">
+                        <i class="fa-solid fa-bars mx-2 fs-7"></i>
+                    </div>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <!-- Dropdown submenu -->
+                        <li>
+                            <a class="dropdown-item" href="/profile">
+                                <i class="fa-regular fa-user fa-fw me-2"></i>
+                                My profile
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="fa-regular fa-cart-shopping fa-fw me-2"></i>
+                                Order history
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item text-danger" href="#">
+                                <i class="fas fa-sign-out-alt fa-fw me-2"></i>
+                                Sign Out
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
                 <!-- Responsive navbar toggler -->
