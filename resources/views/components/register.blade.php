@@ -45,13 +45,15 @@
                                 <i id="toggleNewPassword" class="fas fa-eye cursor-pointer p-2"></i>
                             </button>
                         </div>
-                        <div class="mb-3">
-                            <div class="progress">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="progress flex-grow-1 me-2">
                                 <div id="newPasswordStrengthMeter" class="progress-bar" role="progressbar"
                                     style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
                                     <span id="newPasswordStrengthText" class="text-light"></span>
                                 </div>
                             </div>
+                            <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip"
+                                data-bs-title="Password harus minimal 8 karakter, dapat terdiri dari huruf kecil, huruf besar dan angka."></i>
                         </div>
 
                         <div class="form-floating mb-3">
@@ -67,17 +69,19 @@
                                 <i id="toggleConfirmPassword" class="fas fa-eye cursor-pointer p-2"></i>
                             </button>
                         </div>
-                        <div class="mb-3">
-                            <div class="progress">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="progress flex-grow-1 me-2">
                                 <div id="confirmPasswordStrengthMeter" class="progress-bar" role="progressbar"
                                     style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
                                     <span id="confirmPasswordStrengthText" class="text-light"></span>
                                 </div>
                             </div>
+                            <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip"
+                                data-bs-title="Password harus minimal 8 karakter, dapat terdiri dari huruf kecil, huruf besar dan angka."></i>
                         </div>
 
-                        <button type="button" class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" id="nextStepButton"
-                            onclick="nextStep()">Selanjutnya</button>
+                        <button type="button" class="w-100 mb-2 btn btn-lg rounded-3 btn-primary"
+                            id="nextStepButton" onclick="nextStep()">Selanjutnya</button>
                     </div>
 
                     <!-- Step 2 -->
