@@ -81,7 +81,7 @@
                                 style="--fa-primary-color: #c1edd3; --fa-secondary-color: #09b850; --fa-secondary-opacity: 1;"></i>
 
                             <!-- Content -->
-                            <h5 class="mb-3"><a href="#">Aman</a></h5>
+                            <h5 class="mb-3">Aman</h5>
                             <p>Data pelanggan terjamin perlindungan maksimal dengan sistem keamanan terbaik.</p>
                         </div>
                     </div>
@@ -97,7 +97,7 @@
                                 style="--fa-primary-color: #09b850; --fa-secondary-color: #c1edd3; --fa-secondary-opacity: 1;"></i>
 
                             <!-- Content -->
-                            <h5 class="mb-3"><a href="#">Murah</a></h5>
+                            <h5 class="mb-3">Murah</h5>
                             <p>Biaya layanan paling murah dibandingkan dengan yang lain.</p>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
                                 style="--fa-primary-color: #09b850; --fa-secondary-color: #c1edd3; --fa-secondary-opacity: 1;"></i>
 
                             <!-- Content -->
-                            <h5 class="mb-3"><a href="#">Cepat</a></h5>
+                            <h5 class="mb-3">Cepat</h5>
                             <p>Proses pembayaran yang cepat tanpa harus menunggu lama.</p>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
                                 style="--fa-primary-color: #09b850; --fa-secondary-color: #c1edd3; --fa-secondary-opacity: 1;"></i>
 
                             <!-- Content -->
-                            <h5 class="mb-3"><a href="#">Anti Ribet</a></h5>
+                            <h5 class="mb-3">Anti Ribet</h5>
                             <p>Hanya dengan beberapa klik saja, bayar tagihan listrik Anda dengan mudah.</p>
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                                 style="--fa-primary-color: #09b850; --fa-secondary-color: #c1edd3; --fa-secondary-opacity: 1;"></i>
 
                             <!-- Content -->
-                            <h5 class="mb-3"><a href="#">Terpercaya</a></h5>
+                            <h5 class="mb-3">Terpercaya</h5>
                             <p>Telah dipercaya oleh ribuan pelanggan dengan reputasi yang baik.</p>
                         </div>
                     </div>
