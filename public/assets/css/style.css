@@ -3859,19 +3859,19 @@ fieldset:disabled .btn {
 
 .btn-info {
     --bs-btn-color: #fff;
-    --bs-btn-bg: #17a2b8;
-    --bs-btn-border-color: #17a2b8;
+    --bs-btn-bg: #4C82F7;
+    --bs-btn-border-color: #4C82F7;
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #148a9c;
-    --bs-btn-hover-border-color: #128293;
-    --bs-btn-focus-shadow-rgb: 58, 176, 195;
+    --bs-btn-hover-bg: #2768F5;
+    --bs-btn-hover-border-color: #2768F5;
+    --bs-btn-focus-shadow-rgb: 39, 104, 245;
     --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #128293;
-    --bs-btn-active-border-color: #117a8a;
+    --bs-btn-active-bg: #2768F5;
+    --bs-btn-active-border-color: #2768F5;
     --bs-btn-active-shadow: none;
     --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #17a2b8;
-    --bs-btn-disabled-border-color: #17a2b8;
+    --bs-btn-disabled-bg: #4C82F7;
+    --bs-btn-disabled-border-color: #4C82F7;
 }
 
 .btn-warning {
@@ -10671,6 +10671,18 @@ fieldset:disabled .btn {
 
 .fs-6 {
     font-size: 1.2rem !important;
+}
+
+.fs-7 {
+    font-size: 1rem !important;
+}
+
+.fs-8 {
+    font-size: 0.8rem !important;
+}
+
+.fs-9 {
+    font-size: 0.7rem !important;
 }
 
 .fst-italic {
