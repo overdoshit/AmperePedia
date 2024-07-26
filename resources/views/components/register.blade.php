@@ -16,7 +16,7 @@
                         </div>
                         <div class="stepwizard-step col-xs-3">
                             <button type="button" class="btn btn-light btn-circle step-btn" data-step="2"
-                                onclick="nextStep()">2</button>
+                                id="nextStepWizard" onclick="nextStep()">2</button>
                             <p><small>Personal</small></p>
                         </div>
                     </div>
@@ -92,7 +92,8 @@
 
                         <div class="form-floating mb-4">
                             <input type="number" class="form-control rounded-3" id="floatingClientNumber"
-                                name="clientNumber" autocomplete="off" placeholder="Nomor Pelanggan PLN" required>
+                                name="clientNumber" autocomplete="clientNumber" placeholder="Nomor Pelanggan PLN"
+                                required>
                             <label for="floatingClientNumber">Nomor Pelanggan PLN <span
                                     class="required">*</span></label>
                         </div>
@@ -111,7 +112,7 @@
 
                         <div class="form-floating mb-4">
                             <textarea class="form-control rounded-3" id="floatingAddress" name="address" placeholder="Alamat"
-                                style="height: 100px;" required></textarea>
+                                style="height: 100px;" rows="3" autocomplete="address" spellcheck="false" required></textarea>
                             <label for="floatingAddress">Alamat <span class="required">*</span></label>
                         </div>
 
