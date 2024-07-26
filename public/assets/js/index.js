@@ -167,21 +167,25 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    newPasswordInput.addEventListener("input", function() {
-        checkPasswordMatch(newPasswordInput, confirmPasswordInput);
-    });
+    if (newPasswordInput && confirmPasswordInput) {
+        newPasswordInput.addEventListener("input", function() {
+            checkPasswordMatch(newPasswordInput, confirmPasswordInput);
+        });
 
-    confirmPasswordInput.addEventListener("input", function() {
-        checkPasswordMatch(newPasswordInput, confirmPasswordInput);
-    });
+        confirmPasswordInput.addEventListener("input", function() {
+            checkPasswordMatch(newPasswordInput, confirmPasswordInput);
+        });
+    }
 
-    changePasswordInput.addEventListener("input", function() {
-        checkPasswordMatch(changePasswordInput, confirmChangePasswordInput);
-    });
+    if (changePasswordInput && confirmChangePasswordInput) {
+        changePasswordInput.addEventListener("input", function() {
+            checkPasswordMatch(changePasswordInput, confirmChangePasswordInput);
+        });
 
-    confirmChangePasswordInput.addEventListener("input", function() {
-        checkPasswordMatch(changePasswordInput, confirmChangePasswordInput);
-    });
+        confirmChangePasswordInput.addEventListener("input", function() {
+            checkPasswordMatch(changePasswordInput, confirmChangePasswordInput);
+        });
+    }
     // Password Match Check End
 
     // Field Check Start
@@ -215,29 +219,37 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    loginModal.addEventListener("input", function() {
-        checkFormCompletion(loginModal);
-    });
+    if (loginModal) {
+        loginModal.addEventListener("input", function() {
+            checkFormCompletion(loginModal);
+        });
+    }
 
-    registerModal.addEventListener("input", function() {
-        checkFormCompletion(registerModal, 1);
-        checkFormCompletion(registerModal, 2);
-    });
+    if (registerModal) {
+        registerModal.addEventListener("input", function() {
+            checkFormCompletion(registerModal, 1);
+            checkFormCompletion(registerModal, 2);
+        });
+    }
 
-    updateProfileForm.addEventListener("input", function() {
-        checkFormCompletion(updateProfileForm);
-    });
+    if (updateProfileForm) {
+        updateProfileForm.addEventListener("input", function() {
+            checkFormCompletion(updateProfileForm);
+        });
+    }
 
-    updatePasswordForm.addEventListener("input", function() {
-        checkFormCompletion(updatePasswordForm);
-    });
+    if (updatePasswordForm) {
+        updatePasswordForm.addEventListener("input", function() {
+            checkFormCompletion(updatePasswordForm);
+        });
+    }
 
-    loginSubmitButton.disabled = true;
-    nextStepWizard.disabled = true;
-    nextStepButton.disabled = true;
-    registerSubmitButton.disabled = true;
-    updateProfileSubmitButton.disabled = true;
-    updatePasswordSubmitButton.disabled = true;
+    if (loginSubmitButton) loginSubmitButton.disabled = true;
+    if (nextStepWizard) nextStepWizard.disabled = true;
+    if (nextStepButton) nextStepButton.disabled = true;
+    if (registerSubmitButton) registerSubmitButton.disabled = true;
+    if (updateProfileSubmitButton) updateProfileSubmitButton.disabled = true;
+    if (updatePasswordSubmitButton) updatePasswordSubmitButton.disabled = true;
     // Field Check End
 
 });
