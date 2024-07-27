@@ -55,6 +55,7 @@
 
     <x-login></x-login>
     <x-register></x-register>
+    <x-toaster></x-toaster>
     <x-add-client-number></x-add-client-number>
 
     <!-- Back to top -->
