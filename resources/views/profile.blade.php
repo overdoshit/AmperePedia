@@ -69,32 +69,19 @@
                                     </div>
 
                                     <!-- Full name -->
-                                    <div class="col-12">
+                                    <div class="col-6">
                                         <label class="form-label">Nama Lengkap</label>
                                         <input type="text" name="name" value="John Doe"
                                             class="form-control rounded-3" autocomplete="name" placeholder="Full name"
                                             required>
                                     </div>
 
-                                    <!-- Client Number -->
-                                    <div class="col-md-6">
-                                        <label class="form-label">Nomor Pelanggan PLN</label>
-                                        <input type="number" name="clientNumber" value="0123456789"
-                                            class="form-control rounded-3" autocomplete="off"
-                                            placeholder="Nomor Pelanggan PLN" required disabled>
-                                    </div>
-
-                                    <!-- Power -->
-                                    <div class="col-md-6">
-                                        <label class="form-label">Daya Listrik</label>
-                                        <select name="power" class="form-control form-select rounded-3" required
-                                            disabled>
-                                            <option value="2" disabled>Pilih Daya Listrik</option>
-                                            <option value="1">450 VA</option>
-                                            <option value="2" selected>900 VA</option>
-                                            <option value="3">1300 VA</option>
-                                            <option value="4">2200 VA</option>
-                                        </select>
+                                    <!-- Full name -->
+                                    <div class="col-6">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" name="email" value="johndoe@gmail.com"
+                                            class="form-control rounded-3" autocomplete="email"
+                                            placeholder="johndoe@gmail.com" required disabled>
                                     </div>
 
                                     <!-- Address -->
@@ -115,6 +102,38 @@
                             </div>
                         </div>
                     </form>
+
+                    <!-- Electricity Information -->
+                    <div class="card bg-transparent p-0">
+                        <!-- Card header -->
+                        <div class="card-header bg-transparent border-bottom px-0">
+                            <h6 class="mb-0">Electricity Information</h6>
+                        </div>
+
+                        <!-- Card body -->
+                        <div class="card-body px-0">
+                            <div class="text-end mb-3">
+                                <a href="#" class="btn btn-primary mb-0" data-bs-toggle="modal"
+                                    data-bs-target="#newClientNumberModal"><i
+                                        class="fa-solid fa-plus me-2"></i>Tambahkan Baru</a>
+                            </div>
+
+                            <!-- Master card -->
+                            <div class="border rounded p-4 mb-4">
+                                <div class="d-flex align-items-between">
+                                    <div class="flex-grow-1">
+                                        <p class="heading-color fw-normal mb-0">787944321099</p>
+                                        <small class="text-muted">PT. Rebahan</small>
+                                    </div>
+
+                                    <div class="my-auto">
+                                        <button type="button" class="btn btn-sm btn-outline-danger mb-0">
+                                            <i class="fa-regular fa-trash-can me-1"></i>Hapus</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Update password -->
                     <form id="updatePassword">

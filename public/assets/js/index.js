@@ -126,8 +126,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const registerModal = document.getElementById("registerModal");
     const newPasswordInput = document.getElementById("floatingNewPassword");
     const confirmPasswordInput = document.getElementById("floatingConfirmPassword");
-    const nextStepWizard = document.getElementById("nextStepWizard");
-    const nextStepButton = document.getElementById("nextStepButton");
     const registerSubmitButton = document.getElementById("registerSubmitButton");
 
     const updateProfileForm = document.getElementById("updateProfile");
@@ -188,34 +186,55 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     // Password Match Check End
 
+    // Email Regex Start
+    function isValidEmail(email) {
+		const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/;
+		return emailPattern.test(email);
+	}
+    // Email Regex End
+
     // Field Check Start
-    function checkFormCompletion(element, step = null) {
-        const inputs = element.querySelectorAll(step ? `#step${step} input, #step${step} select, #step${step} textarea` : 'input, select, textarea');
+    function checkFormCompletion(element) {
+        const inputs = element.querySelectorAll("input, select, textarea");
         let allFilled = true;
+        let emailValid = true;
 
         inputs.forEach((input) => {
             if (input.value.trim() === "") {
                 allFilled = false;
             }
+
+            if (input.type === "email" && !isValidEmail(input.value.trim())) {
+				emailValid = false;
+			}
         });
 
-        if (element.id === "registerModal" && step === 1 && !passwordsMatch) {
+        if (element.id === "registerModal" && (!passwordsMatch || !emailValid)) {
+            allFilled = false;
+        }
+
+        if (element.id === "loginModal" && !emailValid) {
+            allFilled = false;
+        }
+
+        if (element.id === "updatePassword" && !passwordsMatch) {
             allFilled = false;
         }
 
         if (element.id === "loginModal") {
             loginSubmitButton.disabled = !allFilled;
-        } else if (element.id === "registerModal") {
-            if (step === 1) {
-                nextStepWizard.disabled = !allFilled;
-                nextStepButton.disabled = !allFilled;
-            } else if (step === 2) {
-                registerSubmitButton.disabled = !allFilled;
-            }
-        } else if (element.id === "updateProfile") {
+        }
+
+        if (element.id === "registerModal") {
+            registerSubmitButton.disabled = !allFilled;
+        }
+
+        if (element.id === "updateProfile") {
             updateProfileSubmitButton.disabled = !allFilled;
-        } else if (element.id === "updatePassword") {
-            updatePasswordSubmitButton.disabled = !allFilled || !passwordsMatch;
+        }
+
+        if (element.id === "updatePassword") {
+            updatePasswordSubmitButton.disabled = !allFilled;
         }
     }
 
@@ -227,8 +246,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (registerModal) {
         registerModal.addEventListener("input", function() {
-            checkFormCompletion(registerModal, 1);
-            checkFormCompletion(registerModal, 2);
+            checkFormCompletion(registerModal);
         });
     }
 
@@ -245,52 +263,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     if (loginSubmitButton) loginSubmitButton.disabled = true;
-    if (nextStepWizard) nextStepWizard.disabled = true;
-    if (nextStepButton) nextStepButton.disabled = true;
     if (registerSubmitButton) registerSubmitButton.disabled = true;
     if (updateProfileSubmitButton) updateProfileSubmitButton.disabled = true;
     if (updatePasswordSubmitButton) updatePasswordSubmitButton.disabled = true;
     // Field Check End
 
 });
-
-// Register Modal Step by Step Start
-function updateStepButtons(step) {
-    const stepButtons = document.querySelectorAll('.step-btn');
-    stepButtons.forEach(button => {
-        if (parseInt(button.getAttribute('data-step')) === step) {
-            button.classList.remove('btn-light');
-            button.classList.add('btn-primary');
-        } else {
-            button.classList.remove('btn-primary');
-            button.classList.add('btn-light');
-        }
-    });
-}
-
-function nextStep() {
-    const step1Inputs = document.querySelectorAll('#step1 input');
-    let allFilled = true;
-
-    step1Inputs.forEach(input => {
-        if (input.value.trim() === "") {
-            allFilled = false;
-        }
-    });
-
-    if (allFilled) {
-        document.getElementById('step1').style.display = 'none';
-        document.getElementById('step2').style.display = 'block';
-        updateStepButtons(2);
-    }
-}
-
-function prevStep() {
-    document.getElementById('step2').style.display = 'none';
-    document.getElementById('step1').style.display = 'block';
-    updateStepButtons(1);
-}
-// Register Modal Step by Step End
 
 // Order History Start
 document.addEventListener('DOMContentLoaded', function() {

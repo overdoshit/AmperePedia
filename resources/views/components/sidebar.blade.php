@@ -19,7 +19,7 @@
                             src="assets/images/users/default.jpg" alt="User" style="object-fit: cover;">
                     </div>
                     <h6 class="mb-0">John Doe</h6>
-                    <a href="/profile" class="text-reset text-primary-hover small">@johndoe</a>
+                    <a href="/profile" class="text-reset text-primary-hover small">johndoe@gmail.com</a>
                 </div>
 
                 <!-- Card body START -->

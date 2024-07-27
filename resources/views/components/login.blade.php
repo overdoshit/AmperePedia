@@ -9,11 +9,10 @@
             </div>
             <div class="modal-body p-3 mx-3 pt-0">
                 <form id="loginForm" action="" method="post">
-
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control rounded-3" id="floatingUsername" name="username"
-                            autocomplete="username" placeholder="Username" required>
-                        <label for="floatingUsername">Username <span class="required">*</span></label>
+                        <input type="email" class="form-control rounded-3" id="floatingEmail" name="email"
+                            autocomplete="email" placeholder="johndoe@gmail.com" required>
+                        <label for="floatingEmail">Email <span class="required">*</span></label>
                     </div>
 
                     <div class="form-floating mb-4">
@@ -30,6 +29,7 @@
 
                     <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit"
                         id="loginSubmitButton">Masuk</button>
+
                     <div class="pb-2">
                         <small class="text-body-secondary mb-4">Belum punya akun?</small>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal"

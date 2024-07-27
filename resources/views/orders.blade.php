@@ -80,12 +80,22 @@
                                                         <h6 class="fw-bold">Customer Information</h6>
                                                         <div class="row g-2">
                                                             <div class="col-md-6">
-                                                                <p class="mb-1 small text-muted">Nama Pelanggan</p>
+                                                                <p class="mb-1 small text-muted">Nama Lengkap</p>
                                                                 <p class="fw-semibold mb-1">John Doe</p>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <p class="mb-1 small text-muted">Alamat</p>
-                                                                <p class="fw-semibold mb-1">Jl. Merdeka No. 123, Jakarta
+                                                                <p class="mb-1 small text-muted">Email</p>
+                                                                <p class="fw-semibold mb-1">johndoe@gmail.com
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p class="mb-1 small text-muted">No. Order</p>
+                                                                <p class="fw-semibold mb-1">240711869549
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p class="mb-1 small text-muted">Tanggal Order</p>
+                                                                <p class="fw-semibold mb-1">11 Jul 2024, 17:30 WIB
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -99,21 +109,43 @@
                                                         <h6 class="fw-bold">Electricity Information</h6>
                                                         <div class="row g-2">
                                                             <div class="col-md-6">
+                                                                <p class="mb-1 small text-muted">Nama Pelanggan
+                                                                </p>
+                                                                <p class="fw-semibold mb-1">PT. Rebahan</p>
+                                                            </div>
+                                                            <div class="col-md-6">
                                                                 <p class="mb-1 small text-muted">Nomor Pelanggan PLN
                                                                 </p>
                                                                 <p class="fw-semibold mb-1">787944321099</p>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <p class="mb-1 small text-muted">Daya Listrik</p>
-                                                                <p class="fw-semibold mb-1">900 VA</p>
+                                                                <p class="mb-1 small text-muted">Tarif / Daya Listrik
+                                                                </p>
+                                                                <p class="fw-semibold mb-1">R1 / 1300 VA</p>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <p class="mb-1 small text-muted">Bulan / Tahun</p>
-                                                                <p class="fw-semibold mb-1">Juli 2024</p>
+                                                                <p class="fw-semibold mb-1">Juli / 2024</p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p class="mb-1 small text-muted">Meter Awal</p>
+                                                                <p class="fw-semibold mb-1">100 KWh</p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p class="mb-1 small text-muted">Meter Akhir</p>
+                                                                <p class="fw-semibold mb-1">150 KWh</p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p class="mb-1 small text-muted">Penggunaan</p>
+                                                                <p class="fw-semibold mb-1">50 KWh</p>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <p class="mb-1 small text-muted">Biaya Tagihan</p>
                                                                 <p class="fw-semibold mb-1">Rp207.000</p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p class="mb-1 small text-muted">Biaya Denda</p>
+                                                                <p class="fw-semibold mb-1">Rp0</p>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <p class="mb-1 small text-muted">Biaya Admin</p>
@@ -122,6 +154,11 @@
                                                             <div class="col-md-6">
                                                                 <p class="mb-1 small text-muted">Biaya Total</p>
                                                                 <p class="fw-semibold mb-1">Rp208.000</p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p class="mb-1 small text-muted">Alamat Pelanggan</p>
+                                                                <p class="fw-semibold mb-1">Jl. Merdeka No. 123, Jakarta
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
