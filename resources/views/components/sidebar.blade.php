@@ -1,4 +1,4 @@
-<!-- Sidebar -->
+<!-- Sidebar START-->
 <div class="col-lg-4 col-xl-3">
     <!-- Responsive offcanvas body START -->
     <div class="offcanvas-lg offcanvas-start h-100" tabindex="-1" id="offcanvasSidebar">
@@ -53,3 +53,4 @@
         </div>
     </div>
 </div>
+<!-- Sidebar END-->
