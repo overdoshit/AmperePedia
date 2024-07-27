@@ -94,7 +94,7 @@
                                     <div class="d-flex justify-content-end mt-4">
                                         <button type="submit" class="btn btn-primary mb-0"
                                             id="updateProfileSubmitButton">
-                                            Save Changes<i class="fa-solid fa-floppy-disk ms-2"></i>
+                                            <i class="fa-solid fa-floppy-disk me-2"></i>Save Changes
                                         </button>
                                     </div>
 
@@ -228,7 +228,7 @@
                                 <div class="d-flex justify-content-end mt-4">
                                     <button type="submit" class="btn btn-primary mb-0"
                                         id="updatePasswordSubmitButton">
-                                        Change Password<i class="fa-solid fa-lock-keyhole ms-2"></i>
+                                        <i class="fa-solid fa-lock-keyhole me-2"></i>Change Password
                                     </button>
                                 </div>
                             </div>
