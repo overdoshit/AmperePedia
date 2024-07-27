@@ -338,3 +338,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 // Home Page End
+
+// Toaster Start
+// Autohide toaster
+document.addEventListener("DOMContentLoaded", function () {
+	var toastElement = document.getElementById("toast");
+	if (toastElement) {
+		var toast = new bootstrap.Toast(toastElement);
+		toast.show();
+	}
+});
+
+// Toaster End
