@@ -134,11 +134,6 @@
                         data-bs-target="#registerModal">Daftar</button>
                 </li>
 
-                <!-- Bayar button -->
-                <li class="nav-item me-2 d-none d-sm-block">
-                    <a href="#" class="btn btn-sm btn-outline-primary mb-0">Bayar</a>
-                </li>
-
                 <!-- Profile button -->
                 <li class="nav-item dropdown d-none d-sm-block">
                     <div class="profile btn btn-primary px-2 d-flex justify-content-between align-items-center mb-0"
