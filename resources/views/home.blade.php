@@ -1,7 +1,7 @@
 <x-layout>
     <x-slot:title>AmperePedia</x-slot:title>
 
-    <section id="bayar" class="position-relative overflow-hidden pt-xl-9">
+    <section id="bayar" class="position-relative pt-xl-9">
         <!-- SVG decoration START-->
         <div class="position-absolute top-0 start-0 ms-n7 d-none d-xl-block">
             <img src="assets/images/decoration-pattern-1.svg" alt="">
@@ -35,10 +35,24 @@
             <!-- Input -->
             <form class="inner-container bg-body border rounded-3 position-relative p-2 mt-4 mt-md-5" id="orderForm"
                 method="post" style="max-width: 600px;">
-                <div class="input-group">
-                    <input class="form-control focus-shadow-none border-0 me-1" type="number" name="clientNumber"
-                        placeholder="Masukan nomor pelanggan" required autofocus>
-                    <button type="submit" class="btn btn-primary rounded-3 mb-0">Bayar</button>
+                <div class="input-group d-flex gap-2">
+                    <div class="dropdown flex-grow-1">
+                        <button class="btn dropdown-toggle w-100 d-flex justify-content-between align-items-center"
+                            type="button" id="dropdownClientNumber" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pilih Nomor Pelanggan
+                        </button>
+                        <ul class="dropdown-menu w-100" aria-labelledby="dropdownClientNumber"
+                            id="dropdownMenuClientNumber">
+                            <li class="dropdown-item" data-value="123456789012">123456789012</li>
+                            <hr class="dropdown-divider">
+                            <li class="dropdown-item text-primary" data-value="addNew">
+                                <i class="fa-solid fa-plus me-1"></i>Tambahkan Baru
+                            </li>
+                        </ul>
+                    </div>
+                    <input type="hidden" name="clientNumber" id="clientNumber" required>
+                    <button type="submit"
+                        class="btn btn-primary rounded-3 mb-0 flex-grow-1 flex-md-grow-0">Bayar</button>
                 </div>
             </form>
 

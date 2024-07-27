@@ -22034,6 +22034,10 @@ input[type="number"] {
 /* Footer End */
 
 /* Homepage Start */
+.dropdown-item {
+    cursor: pointer;
+}
+
 @keyframes blinking {
     from,
     to {

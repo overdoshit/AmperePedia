@@ -310,3 +310,53 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 // Order History End
+
+// Home Page Start
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownClientNumber = document.getElementById('dropdownClientNumber');
+    const dropdownMenuClientNumber = document.getElementById('dropdownMenuClientNumber');
+    const clientNumberInput = document.getElementById('clientNumber');
+    const newClientNumberForm = document.getElementById('newClientNumberForm');
+    const newCustomerNumber = document.getElementById('newCustomerNumber');
+    const newClientNumberModal = new bootstrap.Modal(document.getElementById('newClientNumberModal'), {});
+
+    if (dropdownMenuClientNumber) {
+        dropdownMenuClientNumber.addEventListener('click', function(e) {
+            if (e.target.matches('.dropdown-item')) {
+                const value = e.target.getAttribute('data-value');
+                const text = e.target.textContent.trim();
+    
+                if (value === 'addNew') {
+                    newClientNumberModal.show();
+                } else {
+                    dropdownClientNumber.textContent = text;
+                    clientNumberInput.value = value;
+                }
+            }
+        });
+    }
+
+    newClientNumberForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const newNumber = newCustomerNumber.value.trim();
+        if (newNumber) {
+            const newOption = document.createElement('li');
+            newOption.classList.add('dropdown-item');
+            newOption.setAttribute('data-value', newNumber);
+            newOption.textContent = newNumber;
+            const divider = dropdownMenuClientNumber.querySelector('.dropdown-divider');
+            dropdownMenuClientNumber.insertBefore(newOption, divider);
+
+            newOption.addEventListener('click', function() {
+                dropdownClientNumber.textContent = this.textContent;
+                clientNumberInput.value = this.getAttribute('data-value');
+            });
+
+            dropdownClientNumber.textContent = newNumber;
+            clientNumberInput.value = newNumber;
+            newCustomerNumber.value = '';
+            newClientNumberModal.hide();
+        }
+    });
+});
+// Home Page End

@@ -55,6 +55,7 @@
 
     <x-login></x-login>
     <x-register></x-register>
+    <x-add-client-number></x-add-client-number>
 
     <!-- Back to top -->
     <div class="back-top" data-bs-toggle="tooltip" data-bs-title="Back to Top"></div>
